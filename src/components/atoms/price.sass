@@ -1,17 +1,19 @@
+@use '../utils/_colors'
+@use '../utils/_functions'
 
 .title-price
-    width: 70px
-    height: 25px
+    width: functions.rem(16, 70)
+    height: functions.rem(16, 25)
 
-    background: rgba(255, 255, 255, 0.25)
-    backdrop-filter: blur(30px)
-    border-radius: 3px 5px 5px 3px
-    transform: translateX(-2px)
+    background: colors.$bggrey
+    backdrop-filter: blur(functions.rem(16, 30))
+    border-radius: functions.rem(16, 3) functions.rem(16, 5) functions.rem(16, 5) functions.rem(16, 3)
+    transform: translateX(- functions.rem(16, 2))
 
     display: flex
     justify-content: center
     align-items: center
 
     color: white
-    font-size: 12px
+    font-size: functions.rem(16, 12)
     font-weight: 700
