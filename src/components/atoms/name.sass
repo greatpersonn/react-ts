@@ -1,8 +1,10 @@
+@use '../utils/_colors'
+@use '../utils/_functions'
 
 .title-name
-    margin: 8px 10px 14px
+    margin: functions.rem(16, 8) functions.rem(16, 10) functions.rem(16, 14)
 
     font-weight: 400
-    font-size: 14px
-    line-height: 20px
-    color: white
+    font-size: functions.rem(16, 14)
+    line-height: functions.rem(16, 20)
+    color: colors.$whitergba

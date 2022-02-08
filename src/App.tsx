@@ -6,7 +6,7 @@ const App = () => {
       <main>
         {
           Array.from({ length: 6 }).map((_, id) => (
-            <Card key={id} name={'Soho Coat'} price={301.88} />
+            <Card key={id} name={'Soho Coat'} price={301.88} stock={true}/>
           ))
         }
       </main>

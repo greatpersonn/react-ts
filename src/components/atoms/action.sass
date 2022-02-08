@@ -1,10 +1,13 @@
+@use '../utils/_colors'
+@use '../utils/_functions'
+
 .subtitle-action
-    width: 30px
-    height: 30px
+    width: functions.rem(16, 30)
+    height: functions.rem(16, 30)
 
-    margin: 11px 0px
+    margin: functions.rem(16, 11) 0px
 
-    background: rgba(19, 17, 29, 0.36)
+    background: colors.$bgaction
     border-radius: 100%
 
     display: flex
@@ -13,6 +16,6 @@
     align-items: center
 
     &:nth-child(2)
-        margin: 11px 11px 0px 0px
+        margin: functions.rem(16, 11) functions.rem(16, 11) 0px 0px
 
 

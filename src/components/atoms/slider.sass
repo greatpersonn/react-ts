@@ -1,46 +1,71 @@
+@use '../utils/_colors'
+@use '../utils/_functions'
+
 .slider__wrapper
     width: 93%
-    height: 30px
+    height: functions.rem(16, 30)
 
     div.slider__item
-        width: 20px
-        height: 20px
-        background: rgba(random(255), random(255), random(255), 1)
-        border-radius: 100%
+        margin: 0 functions.rem(16, 20)
+        
+        width: functions.rem(16, 27)
+        height: functions.rem(16, 27)
+        
+        box-sizing: border-box
+        padding: functions.rem(16, 2)
+
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-content: center
+
+        &:focus
+            border: functions.rem(16, 1) solid colors.$whitergba
+            box-sizing: border-box
+            border-radius: 100%
+            
+        .item
+            width: functions.rem(16, 21)
+            height: functions.rem(16, 21)
+
+            box-sizing: border-box
+            border-radius: 100%
+            background: rgba(random(255), random(255), random(255), 1)
+
 
     p.slider__item
         margin: 0
-        width: 35px
-        height: 25px
+        width: functions.rem(16, 35)
+        height: functions.rem(16, 25)
 
         text-align: center
-        padding: 5px 0px
+        padding: functions.rem(16, 5) 0px
 
-        font-size: .7rem
+        font-size: functions.rem(16, 11)
         color: white
-        border: 2px solid rgba(255, 255, 255, 0)
+        border: functions.rem(16, 2) solid colors.$nobgcolor
         box-sizing: border-box
 
         &:hover
-            border: 2px solid white
+            border: functions.rem(16, 2) solid colors.$whitergba
             box-sizing: border-box
-            border-radius: 8px
+            border-radius: functions.rem(16, 8)
 
         &:focus
-            background: linear-gradient(94.53deg, #D333F9 10.41%, #F9437E 99.34%)
-            backdrop-filter: blur(30px)
+            background: linear-gradient(94.53deg, colors.$gradient_pink_01 10.41%, colors.$gradient_pink_02 99.34%)
+            backdrop-filter: blur(functions.rem(16, 30))
             border: none
-            border-radius: 8px
+            border-radius: functions.rem(16, 8)
 
 
     button
-        width: 10px
-        height: 10px
-        min-width: 0px
-        line-height: 0px
-        font-size: .9rem
-        background: rgba(0, 0, 0, 0)
+        width: functions.rem(16, 10)
+        height: functions.rem(16, 10)
+        min-width: functions.rem(16, 0)
+        line-height: functions.rem(16, 0)
+        font-size: functions.rem(16, 14)
+        background: colors.$nobgcolor
         box-shadow: none
 
         &:hover:enabled
-            background: rgba(0, 0, 0, 0)
+            background: colors.$nobgcolor
